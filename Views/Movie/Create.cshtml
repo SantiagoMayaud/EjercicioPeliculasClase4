@@ -1,0 +1,21 @@
+@model Movie
+
+<form method="post">
+  <div class="mb-3">
+    <label asp-for="Code" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="Code">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Name" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Category" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="Category">
+  </div>
+   <div class="mb-3">
+    <label asp-for="Runtime" class="form-label"></label>
+    <input type="number" class="form-control" asp-for="Runtime">
+  </div>
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>

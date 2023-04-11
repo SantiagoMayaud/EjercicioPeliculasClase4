@@ -1,0 +1,17 @@
+@model List<Movie>
+<!--Está es la vista principal del ejercicio, el Index de Movies. Corresponde al controlador MovieController y usa un modelo que es una lista de objetos Movie como aparecen en Services. -->
+<div class="text-center">
+    <h1 class="display-4">Peliculas</h1>
+    <p>Listado de peliculas</a>.</p>
+</div>
+
+<ol>
+    @foreach (var item in Model)
+    {
+        <li><a asp-action="Detail" asp-route-id="@item.Code">@item.Name</a></li>
+                //esta linea genera una lista con el "Name" de cada item. Los ASP hacen que, cuando se haga click en el nombre, se derive a la página de "Detail" 
+    }
+</ol>
+
+<a asp-action="Create">Agregar nueva pelicula</a><br> <!--Este botón dispara la acción Create que está dentro del Controlador. La acción Create lleva al usuario a la View de Create -->
+<a asp-action="Delete">Eliminar una pelicula</a>

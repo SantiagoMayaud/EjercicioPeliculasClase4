@@ -1,0 +1,10 @@
+@model Movie
+
+<h1>Ingrese el código de la pelicula a eliminar:</h1>
+<form method="post">
+  <div class="mb-3">
+    <label asp-for="Code" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="Code">
+  </div>
+  <button type="submit" class="btn btn-primary">Eliminar</button>
+</form>
